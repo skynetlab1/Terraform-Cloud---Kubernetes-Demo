@@ -29,28 +29,30 @@ resource "helm_release" "apisix" {
     value = "v3"
   }
 }
-
 resource "kubernetes_manifest" "dashboard_route" {
   manifest = {
     "apiVersion" = "gateway.networking.k8s.io/v1alpha2"
     "kind"       = "HTTPRoute"
-    "metadata" = {
+    "metadata"   = {
       "name"      = "dashboard-route"
       "namespace" = var.dashboard_namespace
     }
     "spec" = {
-      "http" = [
+      "hostnames" = [var.dashboard_domain]
+      "rules" = [
         {
-          "name" = "rule1"
-          "match" = {
-            "hosts" = [var.dashboard_domain]
-            "paths" = ["/*"]
-          }
-          "backends" = [
+          "matches" = [
             {
-              "serviceName"        = var.dashboard_service_name
-              "servicePort"        = var.dashboard_service_port
-              "resolveGranularity" = "endpoints"
+              "path" = {
+                "type"  = "PathPrefix"
+                "value" = "/"
+              }
+            }
+          ]
+          "backendRefs" = [
+            {
+              "name" = var.dashboard_service_name
+              "port" = var.dashboard_service_port
             }
           ]
         }
