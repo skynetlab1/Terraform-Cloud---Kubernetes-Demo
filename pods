@@ -1,0 +1,25 @@
+NAMESPACE              NAME                                            READY   STATUS              RESTARTS        AGE    IP             NODE       NOMINATED NODE   READINESS GATES
+default                apisix-776b645d6f-k5m4l                         1/1     Running             0               54m    10.244.0.20    minikube   <none>           <none>
+default                apisix-etcd-0                                   1/1     Running             0               54m    10.244.0.26    minikube   <none>           <none>
+default                apisix-etcd-1                                   1/1     Running             0               54m    10.244.0.25    minikube   <none>           <none>
+default                apisix-etcd-2                                   1/1     Running             0               54m    10.244.0.24    minikube   <none>           <none>
+gateway-system         gateway-api-admission-2jtq4                     0/1     Completed           0               22m    10.244.0.27    minikube   <none>           <none>
+gateway-system         gateway-api-admission-patch-qjb5b               0/1     Completed           0               22m    10.244.0.28    minikube   <none>           <none>
+gateway-system         gateway-api-admission-server-64b98b6646-rkd5m   1/1     Running             0               22m    10.244.0.29    minikube   <none>           <none>
+kube-system            coredns-5dd5756b68-t6vp9                        1/1     Running             1 (5h55m ago)   16h    10.244.0.6     minikube   <none>           <none>
+kube-system            csi-hostpath-attacher-0                         1/1     Running             0               176m   10.244.0.8     minikube   <none>           <none>
+kube-system            csi-hostpath-resizer-0                          1/1     Running             0               176m   10.244.0.10    minikube   <none>           <none>
+kube-system            csi-hostpathplugin-8g6fx                        6/6     Running             0               176m   10.244.0.9     minikube   <none>           <none>
+kube-system            etcd-minikube                                   1/1     Running             1 (5h55m ago)   16h    192.168.49.2   minikube   <none>           <none>
+kube-system            kube-apiserver-minikube                         1/1     Running             1 (3h8m ago)    16h    192.168.49.2   minikube   <none>           <none>
+kube-system            kube-controller-manager-minikube                1/1     Running             1 (5h55m ago)   16h    192.168.49.2   minikube   <none>           <none>
+kube-system            kube-proxy-qkcp7                                1/1     Running             1 (5h55m ago)   16h    192.168.49.2   minikube   <none>           <none>
+kube-system            kube-scheduler-minikube                         1/1     Running             1 (5h55m ago)   16h    192.168.49.2   minikube   <none>           <none>
+kube-system            registry-9rks8                                  1/1     Running             0               154m   10.244.0.14    minikube   <none>           <none>
+kube-system            registry-creds-6cf4f8d55-ncr7c                  0/1     ContainerCreating   0               178m   <none>         minikube   <none>           <none>
+kube-system            registry-proxy-v5222                            1/1     Running             0               154m   10.244.0.13    minikube   <none>           <none>
+kube-system            snapshot-controller-58dbcc7b99-mtcgq            1/1     Running             0               175m   10.244.0.12    minikube   <none>           <none>
+kube-system            snapshot-controller-58dbcc7b99-p9djf            1/1     Running             0               175m   10.244.0.11    minikube   <none>           <none>
+kube-system            storage-provisioner                             1/1     Running             3 (3h7m ago)    16h    192.168.49.2   minikube   <none>           <none>
+kubernetes-dashboard   kubernetes-dashboard-7b96594796-cswcl           1/1     Running             2 (120m ago)    125m   10.244.0.19    minikube   <none>           <none>
+local-path-storage     local-path-provisioner-78b46b4d5c-x4kjg         1/1     Running             0               177m   10.244.0.7     minikube   <none>           <none>
