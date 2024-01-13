@@ -33,7 +33,7 @@ resource "kubernetes_manifest" "dashboard_route" {
   manifest = {
     "apiVersion" = "gateway.networking.k8s.io/v1alpha2"
     "kind"       = "HTTPRoute"
-    "metadata"   = {
+    "metadata" = {
       "name"      = "dashboard-route"
       "namespace" = var.dashboard_namespace
     }
